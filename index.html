@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+<script defer src="./app.js"></script>
+
+</head>
+<body>
+ <section class="activity-tracker">
+
+  <section class="activity-tracker_menu">
+    <div class="activity-tracker_owner">
+      <img src="./images/image-jeremy.png" alt="jeremy" class="activity-tracker_owner-img">
+      <div class="activity-tracker_owner-container">
+        <p class="activity-tracker_owner-for">
+          Report for
+        </p>
+        <hi class="activity-tracker_owner-name">Jeremy Robson</hi>
+      </div>
+    </div>
+    <div class="activity-tracker_options">
+      <button class="activity-tracker_option" data-option="daily">Daily</button>
+      <button class="activity-tracker_option" data-option="weekly">Weekly</button>
+      <button class="activity-tracker_option" data-option="monthly">Monthly</button>
+    </div>
+  </section>
+
+  <!-- <section class="activity-tracker_activity work" >
+    <div class="activity_bg">
+      <img src="./images/icon-work.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity-tracker_activity play">
+    <div class="activity_bg">
+      <img src="./images/icon-play.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity-tracker_activity study">
+    <div class="activity_bg">
+      <img src="./images/icon-study.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity-tracker_activity exercise">
+    <div class="activity_bg">
+      <img src="./images/icon-exercise.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity-tracker_activity social">
+    <div class="activity_bg">
+      <img src="./images/icon-social.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity-tracker_activity self-care">
+    <div class="activity_bg">
+      <img src="./images/icon-self-care.svg" alt="work icon">
+    </div>
+    <div class="activity_info">
+      <header class="activity_header">
+        <h2 class="activity_name">
+          Work
+        </h2>
+        <div class="activity_options">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <div class="activity_timeframes">
+        <h3 class="activity_current-timeframe">
+          32hrs
+        </h3>
+        <div class="activity_previous-timeframe">
+          <p class="time-window">Last Week</p>
+          <p>-</p>
+          <p class="time">36hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="menu when"></div>
+
+
+
+ </section> -->
+
+ 
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
